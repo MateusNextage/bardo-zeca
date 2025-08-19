@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Inicial - Anime Bônus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: linear-gradient(135deg, rgba(30, 0, 50, 0.9), rgba(0, 30, 20, 0.9)), 
+                    url("imagem/background.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      .main-container {
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .hero-title {
+        text-align: center;
+        margin-bottom: 40px;
+        animation: fadeInUp 1s ease-out;
+      }
+
+      .hero-title h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        background: linear-gradient(45deg, #b19cd9, #66ff66);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 10px;
+        text-shadow: 0 0 30px rgba(177, 156, 217, 0.5);
+      }
+
+      .hero-title p {
+        font-size: 1.2rem;
+        color: #c0a0d0;
+        font-weight: 300;
+      }
+
+      .advert-card {
+        background: linear-gradient(135deg, rgba(50, 0, 80, 0.9), rgba(0, 40, 30, 0.8));
+        border: 2px solid rgba(177, 156, 217, 0.3);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                    0 0 50px rgba(177, 156, 217, 0.2);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        animation: fadeInUp 1s ease-out 0.3s both;
+      }
+
+      .advert-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(177, 156, 217, 0.1), transparent);
+        transition: left 0.5s ease;
+      }
+
+      .advert-card:hover::before {
+        left: 100%;
+      }
+
+      .advert-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5),
+                    0 0 80px rgba(177, 156, 217, 0.3);
+        border-color: rgba(177, 156, 217, 0.6);
+      }
+
+      .card-title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #e0b0ff;
+        margin-bottom: 20px;
+        text-align: center;
+        text-shadow: 0 0 20px rgba(224, 176, 255, 0.5);
+      }
+
+      .card-text {
+        font-size: 1.1rem;
+        color: #c0a0d0;
+        text-align: center;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      .btn-primary {
+        background: linear-gradient(45deg, #004d00, #006600);
+        border: 2px solid #66ff66;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.1rem;
+        padding: 15px 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 10px 30px rgba(0, 77, 0, 0.4);
+      }
+
+      .btn-primary::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(102, 255, 102, 0.3), transparent);
+        transition: left 0.5s ease;
+      }
+
+      .btn-primary:hover::before {
+        left: 100%;
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(45deg, #006600, #009900);
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(0, 77, 0, 0.6);
+        border-color: #99ff99;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .loading-section {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+        animation: fadeInUp 1s ease-out 0.6s both;
+      }
+
+      .btn-loading {
+        background: linear-gradient(45deg, #004d00, #006600);
+        border: 2px solid #66ff66;
+        color: #fff;
+        font-weight: 500;
+        padding: 12px 25px;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+        opacity: 0.7;
+      }
+
+      .spinner-border {
+        color: #66ff66;
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+
+      .floating-particles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: rgba(177, 156, 217, 0.6);
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .particle:nth-child(2n) {
+        background: rgba(102, 255, 102, 0.4);
+        animation-delay: -2s;
+      }
+
+      .particle:nth-child(3n) {
+        animation-delay: -4s;
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0px) rotate(0deg);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        25% {
+          transform: translateY(-100px) rotate(90deg);
+        }
+        75% {
+          transform: translateY(-50px) rotate(180deg);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-title h1 {
+          font-size: 2.5rem;
+        }
+        
+        .card-title {
+          font-size: 2rem;
+        }
+        
+        .advert-card {
+          padding: 30px 20px;
+        }
+        
+        .loading-section {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-title h1 {
+          font-size: 2rem;
+        }
+        
+        .card-title {
+          font-size: 1.8rem;
+        }
+        
+        .btn-primary {
+          padding: 12px 30px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div class="floating-particles">
+        <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 20%; animation-delay: -1s;"></div>
+        <div class="particle" style="left: 30%; animation-delay: -2s;"></div>
+        <div class="particle" style="left: 40%; animation-delay: -3s;"></div>
+        <div class="particle" style="left: 50%; animation-delay: -4s;"></div>
+        <div class="particle" style="left: 60%; animation-delay: -5s;"></div>
+        <div class="particle" style="left: 70%; animation-delay: -1.5s;"></div>
+        <div class="particle" style="left: 80%; animation-delay: -2.5s;"></div>
+        <div class="particle" style="left: 90%; animation-delay: -3.5s;"></div>
+    </div>
+
+    <div class="main-container">
+        <div class="hero-title">
+            <h1>Bar do zeca</h1>
+            <p>Descubra aventuras épicas e personagens inesquecíveis</p>
+        </div>
+
+        <div class="row justify-content-center w-100">
+            <div class="col-lg-8 col-md-10">
+                <div class="card advert-card text-center">
+                    <div class="card-body">
+                        <h3 class="card-title">Sinopse</h3>
+                        <p class="card-text">Garanta já seu entretenimento com animes e se divirta com essa surpresa maravilhosa. Uma experiência única te espera com personagens incríveis e histórias envolventes.</p>
+                        <a href="pp.html" class="btn btn-primary">venha!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading-section">
+            <button class="btn btn-loading" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                <span class="visually-hidden" role="status">Carregando...</span>
+            </button>
+            <button class="btn btn-loading" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                <span role="status">Carregando...</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Adicionar mais partículas dinamicamente
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 6 + 's';
+            particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+            document.querySelector('.floating-particles').appendChild(particle);
+
+            // Remove a partícula após a animação
+            setTimeout(() => {
+                particle.remove();
+            }, 8000);
+        }
+
+        // Criar partículas continuamente
+        setInterval(createParticle, 800);
+
+        // Efeito de hover suave nos botões
+        document.querySelectorAll('.btn-primary, .btn-loading').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.05)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
+

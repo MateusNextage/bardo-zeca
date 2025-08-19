@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animes Favoritos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #8b0ca5, #13b373);
+            min-height: 100vh;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .carousel-caption {
+            background: rgba(62, 62, 62, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .anime-description {
+            background: rgba(135, 131, 131, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .youtube-btn {
+            background: linear-gradient(45deg, #ff0000, #cc0000);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .youtube-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+            color: white;
+        }
+
+        .container-custom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 3rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .carousel {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .anime-title {
+            color: #ff6b6b;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .anime-info {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+ <div> 
+      <class="card-body">
+        <div class="row justify-content-center w-100">
+            <div class="col-lg-1 col-md-10">
+                    <a href="index (1).html" class="btn btn-primary">home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div>
+<body>
+    <div class="container-custom">
+        <h1>Bar do zeca</h1>
+
+        <div id="carouselAnimes" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselAnimes" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselAnimes" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselAnimes" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselAnimes" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselAnimes" data-bs-slide-to="4"
+                    aria-label="Slide 0"></button>
+
+
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="imagem/kaoru-hana-wa-rin-to-saku-anime-release-schedule-v0-5bQoUUlO9TAyNLO7w9CwfYOx68dBalTV96TeK5040eI.webp"
+                        class="d-block w-100" alt="kimi no koto">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>kimi no koto</h5>
+                        <p>Rentarou em sua busca de conquistar suas 100 namoradas</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="imagem/MV5BZWQ2YmI5NWMtZTY2Mi00MGUxLWFhMmEtYjVjZjMwOTNkOThjXkEyXkFqcGc@._V1_.jpg"
+                        class="d-block w-100" alt="Erased">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Erased</h5>
+                        <p>Uma história emocionante sobre viagem no tempo</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="imagem/647056.jpg" class="d-block w-100" alt="owari no seraph">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h6>owari no seraph</h6>
+                        <p>um vírus desconhecido dizima a população mundial, exceto crianças, que são escravizadas por
+                            vampiros. <strong>Yuuichirou Hyakuya, um dos órfãos,
+                            </strong>busca vingança contra os vampiros após a morte de sua "família" e se junta ao
+                            Exército Demoníaco Imperial Japonês para lutar contra eles. </p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="imagem/Overflow-colecao-anime.webp" class="d-block w-100"
+                        alt="overflow">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h6>overflow</h6>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAnimes" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselAnimes" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+
+        </button>
+    </div>
+
+    <!-- Descrições dos Animes -->
+    <div class="anime-description">
+        <h2 class="anime-title">OVERFLOW</h2>
+        <div class="anime-info">
+            <p><strong>Gênero:</strong> fantasia, malhação, teste de fidelidade</p>
+            <p><strong>Ano:</strong> 2021</p>
+            <p><strong>Sinopse:</strong> foca em Kazushi Sudou, um jovem que recebe a visita de suas amigas de infância, as irmãs Ayane e Kotone Shirakawa. Em um momento de vingança, as duas irmãs decidem tomar banho com Kazushi, levando a situações inesperadas e potencialmente "quentes". A trama explora a dinâmica entre os três e a dificuldade de Kazushi em resistir às investidas das irmãs, <strong>
+                especialmente considerando o toque de humor e sensualidade na história.</strong> </p>
+            <p><strong>Estúdio:</strong> TNK</p>
+            <a href="imagem/VOU BOTAR PRA MAMA TUDIN😈 _ EDIT HENTAI FUNK _ OVERFLOW(720P_HD).mp4" target="_blank" class="youtube-btn">
+                🎬 Assistir Trailer no YouTube
+            </a>
+        </div>
+    </div>
+
+    <div class="anime-description">
+        <h2 class="anime-title">Erased (Boku dake ga Inai Machi)</h2>
+        <div class="anime-info">
+            <p><strong>Gênero:</strong> Thriller, Mistério, Sobrenatural</p>
+            <p><strong>Ano:</strong> 2016</p>
+            <p><strong>Sinopse:</strong> Satoru Fujinuma é um mangaká de 29 anos que possui uma habilidade chamada
+                "Revival" - ele pode voltar no tempo para prevenir tragédias. Quando sua mãe é assassinada, ele é
+                enviado 18 anos no passado para sua infância, onde deve impedir uma série de sequestros que levaram
+                à morte de seus colegas de classe.</p>
+            <p><strong>Estúdio:</strong> A-1 Pictures</p>
+            <a href="https://www.youtube.com/watch?v=DwmxEAWjTQQ" target="_blank" class="youtube-btn">
+                🎬 Assistir Trailer no YouTube
+            </a>
+        </div>
+
+        <div class="anime-description">
+            <h3 class="anime-title">owari no seraph</h3>
+            <div class="anime-info">
+                <p><strong>Gênero:</strong> Ação, Mistério, Sobrenatural</p>
+                <p><strong>Ano:</strong> 2 de maio de 2016</p>
+                <p><strong>Sinopse:</strong>um vírus desconhecido dizima a população mundial, exceto crianças, que são
+                    escravizadas por
+                    vampiros.</p>
+                <p><strong>Estúdio:</strong> A-1 Pictures</p>
+                <a href="https://www.youtube.com/watch?v=ZY39Mq4L-Mg&list=RDZY39Mq4L-Mg&start_radio=1" target="_blank"
+                    class="youtube-btn">
+                    🎬 Assistir Trailer no YouTube
+                </a>
+            </div>
+            <div class="anime-description">
+                <h4 class="anime-title">kimi no koto</h4>
+                <div class="anime-info">
+                    <p><strong>Gênero:</strong> comedia, echi, romance</p>
+                    <p><strong>Ano:</strong> 2023</p>
+                    <p><strong>Sinopse:</strong>As 100 Namoradas Que Realmente, Realmente, Realmente, Realmente,
+                        Realmente Amam Você, <strong>
+                            frequentemente chamada simplesmente de As 100 Namoradas</strong></p>
+                    <p><strong>Estúdio:</strong> A-1 Pictures</p>
+                    <a href="https://www.youtube.com/watch?v=ls2VNcSifi4" target="_blank" class="youtube-btn">
+                        🎬 Assistir Trailer no YouTube
+                    </a>
+                </div>
+            </div>
+
+
+        <div class="anime-description">
+            <h3 class="anime-title">blades o guerreiro</h3>
+            <div class="anime-info">
+                <p><strong>Gênero:</strong> gore, bdsn, hentai</p>
+                <p><strong>Ano:</strong> 2 de maio de 2016</p>
+                <p><strong>Sinopse:</strong>blades, um estudante do ensino médio que gosta de estudar, jogar, aprender e principalmente, dar o popote.</p>
+                <p><strong>Estúdio:</strong> A-1 Pictures</p>
+                <a href="imagem/VID-20250819-WA0007.mp4" target="_blank"
+                    class="youtube-btn">
+                    🎬 Assistir Trailerzinho hihihi
+                </a>
+            </div>
+
+            <div class="anime-description">
+                <h5 class="anime-title">Sobre Esta Coleção</h5>
+                <div class="anime-info">
+                    <p>Esta é uma coleção de animes que exploram temas profundos e complexos. Ambos os animes apresentam
+                        protagonistas que lidam com traumas do passado e usam habilidades especiais para tentar mudar
+                        seu destino.</p>
+                    <p><strong>Redo of Healer</strong> é conhecido por seu conteúdo maduro e controverso, explorando
+                        temas de vingança e moralidade.</p>
+                    <p><strong>Erased</strong> é amplamente aclamado por sua narrativa envolvente e desenvolvimento
+                        emocional dos personagens.</p>
+                    <p>Ambos oferecem perspectivas únicas sobre segunda chances e as consequências de nossas escolhas.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center my-5">
+            <div class="col-md-8">
+                <div class="card advert-card text-center text-white">
+                    <div class="card-body">
+                        <h3 class="card-title">receba agora seu anime bônus!</h3>
+                        <p class="card-text">Garanta já seu anime anime bônus e se divirta com essa surpresa maravilhosa.</p>
+                        <a href="https://www.themoviedb.org/tv/71861-boku-no-pico/season/1?language=pt-BR" class="btn btn-primary">Adquira já seu anime misterioso!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
